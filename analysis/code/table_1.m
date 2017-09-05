@@ -1,4 +1,3 @@
-x=quantile(earning,10)
-y=quantile(income,10)
-z=quantile(wealth,10)
+x=quantile(earning,[0 0.01 0.05 0.1 0.2 0.4 0.6 0.8 0.9 0.95 0.99 1])
+
 x1=transpose(x)

@@ -1,0 +1,2 @@
+help quantile
+y=quantile(income,[0.1

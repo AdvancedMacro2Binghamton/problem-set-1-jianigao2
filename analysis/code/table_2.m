@@ -36,4 +36,11 @@ ratiowealth=top_w1/low_w40
 
 %location of mean
 %gini index and lorentz curve
-g=gini(WGT,earning)
+A=[WGT,earning,income,wealth]
+A_1=A(A(:,2)>=0,:)
+A_2=A(A(:,3)>=0,:)
+A_3=A(A(:,4)>=0,:)
+earning_gini=gini(A_1(:,1),A_1(:,2),true)
+income_gini=gini(A_2(:,1),A_2(:,3),true)
+wealth_gini=gini(A_3(:,1),A_3(:,4),true)
+
